@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/StartFragment">
+
+    <fragment
+        android:id="@+id/StartFragment"
+        android:name="com.example.drinkstoreapp.ui.StartFragment"
+        tools:layout="@layout/fragment_start">
+
+        <action
+            android:id="@+id/action_StartFragment_to_PointFragment"
+            app:destination="@id/PointFragment" />
+
+        <argument
+            android:name="Get Started"
+            app:argType="com.example.drinkstoreapp.model.Drink"
+            app:nullable="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/PointFragment"
+        android:name="com.example.drinkstoreapp.ui.PointFragment"
+        tools:layout="@layout/fragment_point">
+
+        <action
+            android:id="@+id/action_PointFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+
+        <argument
+            android:name="Register"
+            app:argType="com.example.drinkstoreapp.model.Drink"
+            app:nullable="true"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.drinkstoreapp.ui.LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_LoginFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+
+        <argument
+            android:name="Login"
+            app:argType="com.example.drinkstoreapp.model.Drink"
+            app:nullable="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.drinkstoreapp.ui.FirstFragment"
+        android:label="DrinkStoreApp"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.drinkstoreapp.ui.SecondFragment"
+        android:label="Add Drink Store"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <argument
+            android:name="drink"
+            app:argType="com.example.drinkstoreapp.model.Drink"
+            app:nullable="true"/>
+    </fragment>
+</navigation>

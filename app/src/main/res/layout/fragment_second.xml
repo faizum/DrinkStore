@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SecondFragment"
+    android:background="@drawable/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Name Drink Store"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="16dp"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/nameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintEnd_toEndOf="@+id/nameEditText"
+            app:layout_constraintHorizontal_bias="0.157"
+            app:layout_constraintStart_toStartOf="@+id/nameEditText"
+            app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
+
+        <EditText
+            android:id="@+id/addressEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="16dp"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintEnd_toEndOf="@+id/addressTextView"
+            app:layout_constraintStart_toStartOf="@+id/addressTextView"
+            app:layout_constraintTop_toBottomOf="@+id/addressTextView" />
+
+        <TextView
+            android:id="@+id/phoneNumberTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintEnd_toEndOf="@+id/addressEditText"
+            app:layout_constraintStart_toStartOf="@+id/addressEditText"
+            app:layout_constraintTop_toBottomOf="@+id/addressEditText" />
+
+        <EditText
+            android:id="@+id/phoneNumberEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="16dp"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintEnd_toEndOf="@+id/phoneNumberTextView"
+            app:layout_constraintStart_toStartOf="@+id/phoneNumberTextView"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumberTextView" />
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="@+id/phoneNumberEditText"
+            app:layout_constraintStart_toStartOf="@+id/phoneNumberEditText"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumberEditText" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/phoneNumberEditText"
+            app:layout_constraintTop_toBottomOf="@+id/map">
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/red"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="Delete"
+                android:fontFamily="@font/montserrat"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green"
+                android:layout_weight="1"
+                android:text="@string/save"
+                android:fontFamily="@font/montserrat" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
