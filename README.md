@@ -1,7 +1,7 @@
 # DrinkStoreApp-Kotlin
  Project UAS Android Studio
 
-Page 1 Enter PIN to Get Started
+Page 1 Enter PIN to Get Started App
 
 <img src="https://github.com/faizum/DrinkStore/blob/main/screenshoot/1.png">
 
